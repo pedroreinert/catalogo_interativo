@@ -47,6 +47,8 @@ O Catálogo Interativo é um sistema desenvolvido para resolver o problema de re
 - **Pandas** - Processamento de dados Excel
 - **Flask-CORS** - Suporte a CORS
 
+### Para teste via smartphone foi utilizado o cloudflare por facilidade e também porque é uma forma de testar no aparelho e online sem custos, quando o sistema for implantado terão que ser removidas todas as etapas do cloudflare.
+
 ## Estrutura do Projeto
 
 ```
