@@ -24,13 +24,13 @@ Na tela de detalhes você verá:
    - **Quantidade:** Quantas unidades você precisa
    - **Centro de Custo:** Código do seu setor
    - **Nome:** Seu nome completo
-3. **Adicione fotos** se necessário (opcional)
+3. **Adicione fotos** 
 4. **Toque** em "Enviar Solicitação"
 
 ### ✅ **Confirmação**
 
 - O sistema mostrará uma mensagem de sucesso
-- Um email será enviado automaticamente para o almoxarifado
+- Um email será enviado automaticamente para o almoxarifado e para a gerência do centro de custo
 - Você retornará à tela inicial
 
 ## 🔧 **Para Administradores**
@@ -55,8 +55,7 @@ O arquivo deve ter estas colunas:
 
 - **Verifique** sempre a quantidade disponível antes de solicitar
 - **Preencha** todos os campos obrigatórios (marcados com *)
-- **Use códigos** corretos do centro de custo
-- **Tire fotos** para itens de alto valor
+- **Tire fotos** para todos os itens pois esta é a maior comprovação de retirada
 - **Aguarde** a confirmação antes de sair do sistema
 
 ## 🆘 **Em Caso de Problemas**
