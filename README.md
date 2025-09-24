@@ -1,4 +1,4 @@
-# Catálogo Interativo - Sistema de Retirada do Almoxarifado
+## Catálogo Interativo - Sistema de Retirada do Almoxarifado
 
 ## Descrição do Projeto
 
@@ -17,14 +17,14 @@ O Catálogo Interativo é um sistema desenvolvido para resolver o problema de re
 - Validação de disponibilidade antes da retirada
 
 ### 📝 **Formulário de Retirada**
-- Campos obrigatórios: quantidade, centro de custo, nome do operador
+- Campos obrigatórios: quantidade, centro de custo, nome do operador e fotos do produto
 - Validação de quantidade máxima disponível
-- Área opcional para fotos do produto
 
 ### 📧 **Notificação Automática**
-- Envio automático de email para almoxarifado e gerência
+- Envio automático de email para almoxarifado e gerência do centro de custo informado
 - Detalhes completos da solicitação
 - Informações do produto e operador
+- Data e Hora da retirada
 
 ### 🔧 **Administração**
 - Upload de catálogo via arquivo Excel
@@ -109,18 +109,18 @@ pnpm run dev
 
 ## Formato do Arquivo Excel
 
-O arquivo Excel deve conter as seguintes colunas obrigatórias:
+O arquivo Excel deve conter as seguintes colunas **obrigatórias**:
 - **Nome** - Nome do produto
 - **Descrição** - Descrição detalhada
 - **Código do Item** - Código único do produto
 - **Quantidade em Estoque** - Quantidade disponível
-- **Foto** (opcional) - URL da foto do produto
+- **Foto** - URL da foto do produto
 
 ### Exemplo de Estrutura:
 | Nome | Descrição | Código do Item | Quantidade em Estoque | Foto |
 |------|-----------|----------------|----------------------|------|
-| Parafuso Phillips M6x20 | Parafuso Phillips cabeça panela aço inox M6 x 20mm | ABC123 | 150 | |
-| Arruela Lisa M6 | Arruela lisa em aço galvanizado diâmetro interno 6mm | DEF456 | 500 | |
+| Parafuso Phillips M6x20 | Parafuso Phillips cabeça panela aço inox M6 x 20mm | ABC123 | 150 | URL |
+| Arruela Lisa M6 | Arruela lisa em aço galvanizado diâmetro interno 6mm | DEF456 | 500 | URL |
 
 ## Configuração de Email
 
@@ -131,12 +131,10 @@ EMAIL_CONFIG = {
     'smtp_server': 'smtp.gmail.com',
     'smtp_port': 587,
     'email_user': 'seu_email@empresa.com',
-    'email_password': 'sua_senha',
+    'email_password': 'sua_senha', recomendado usar chave para uso externo como por exemplo do gmail
     'warehouse_emails': ['almoxarifado@empresa.com', 'gerencia@empresa.com']
 }
 ```
-
-**Importante:** Descomente o código de envio de email na função `send_pickup_notification()`.
 
 ## Banco de Dados
 
@@ -173,7 +171,7 @@ O sistema utiliza SQLite com as seguintes tabelas:
    - Quantidade desejada
    - Centro de custo
    - Seu nome completo
-6. Adicione fotos se necessário
+   - Foto do produto
 7. Clique em "Enviar Solicitação"
 
 ### Para Administradores
@@ -212,8 +210,3 @@ Para dúvidas ou problemas:
 Este projeto foi desenvolvido especificamente para uso interno da empresa.
 
 ---
-
-**Desenvolvido por:** Manus AI  
-**Data:** Agosto 2025  
-**Versão:** 1.0.0
-
